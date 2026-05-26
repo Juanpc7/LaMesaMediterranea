@@ -143,7 +143,7 @@ public class ClienteDAO {
 
             }
 
-            //conexion.close();
+            conexion.close();
 
         } catch (SQLException e) {
 
