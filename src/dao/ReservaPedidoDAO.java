@@ -1,13 +1,12 @@
 package dao;
 
 import conexion.ConexionBD;
-import modelo.Cliente;
-import modelo.Empleado;
-import modelo.Mesa;
-import modelo.ReservaPedido;
+import dto.Cliente;
+import dto.Empleado;
+import dto.Mesa;
+import dto.ReservaPedido;
 
 import java.sql.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class ReservaPedidoDAO {

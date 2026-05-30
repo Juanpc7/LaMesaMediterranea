@@ -1,8 +1,8 @@
 package dao;
 
 import conexion.ConexionBD;
-import modelo.CategoriaPlato;
-import modelo.Plato;
+import dto.CategoriaPlato;
+import dto.Plato;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

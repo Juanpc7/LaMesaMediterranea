@@ -1,4 +1,4 @@
-package modelo;
+package dto;
 
 import java.time.LocalDateTime;
 
@@ -7,7 +7,6 @@ public class ReservaPedido {
     private int idReserva;
     private LocalDateTime fecha;
     private double importeTotal;
-
     private Cliente cliente;
     private Empleado empleado;
     private Mesa mesa;
@@ -17,7 +16,6 @@ public class ReservaPedido {
 
     public ReservaPedido(LocalDateTime fecha, double importeTotal,
                          Cliente cliente, Empleado empleado, Mesa mesa) {
-
         this.fecha = fecha;
         this.importeTotal = importeTotal;
         this.cliente = cliente;
@@ -75,13 +73,13 @@ public class ReservaPedido {
 
     @Override
     public String toString() {
-        return "ReservaPedido{" +
-                "idReserva=" + idReserva +
-                ", fecha=" + fecha +
-                ", importeTotal=" + importeTotal +
-                ", cliente=" + cliente.getNombre() +
-                ", empleado=" + empleado.getNombre() +
-                ", mesa=" + mesa.getNumero() +
-                '}';
+        return String.format(
+                "%-5d %-20s %-20s %-15s %-10.2f",
+                idReserva,
+                cliente.getNombre(),
+                empleado.getNombre(),
+                "Mesa " + mesa.getNumero(),
+                importeTotal
+        );
     }
 }

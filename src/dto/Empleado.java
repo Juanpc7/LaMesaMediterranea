@@ -1,4 +1,4 @@
-package modelo;
+package dto;
 
 public class Empleado {
 
@@ -60,12 +60,9 @@ public class Empleado {
 
     @Override
     public String toString() {
-        return "Empleado{" +
-                "idEmpleado=" + idEmpleado +
-                ", nombre='" + nombre + '\'' +
-                ", cargo='" + cargo + '\'' +
-                ", turno='" + turno + '\'' +
-                ", añosExperiencia=" + añosExperiencia +
-                '}';
+        return String.format(
+                "%-5d %-20s %-20s %-15s %-10d",
+                idEmpleado, nombre, cargo, turno, añosExperiencia
+        );
     }
 }

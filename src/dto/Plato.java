@@ -1,4 +1,4 @@
-package modelo;
+package dto;
 
 public class Plato {
 
@@ -7,7 +7,6 @@ public class Plato {
     private String descripcion;
     private double precio;
     private boolean disponible;
-
     private CategoriaPlato categoria;
 
     public Plato() {
@@ -71,13 +70,13 @@ public class Plato {
 
     @Override
     public String toString() {
-        return "Plato{" +
-                "idPlato=" + idPlato +
-                ", nombre='" + nombre + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", precio=" + precio +
-                ", disponible=" + disponible +
-                ", categoria=" + categoria.getNombre() +
-                '}';
+        return String.format(
+                "%-5d %-20s %-10.2f %-12s %-20s",
+                idPlato,
+                nombre,
+                precio,
+                disponible ? "SI" : "NO",
+                categoria.getNombre()
+        );
     }
 }

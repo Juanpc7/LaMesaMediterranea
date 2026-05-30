@@ -1,18 +1,18 @@
-package modelo;
+package dto;
 
 public class DetallePedido {
 
     private int idDetalle;
     private int cantidad;
     private double precioUnitario;
-
     private ReservaPedido reserva;
     private Plato plato;
 
     public DetallePedido() {
     }
 
-    public DetallePedido(int cantidad, double precioUnitario, ReservaPedido reserva, Plato plato) {
+    public DetallePedido(int cantidad, double precioUnitario,
+                         ReservaPedido reserva, Plato plato) {
         this.cantidad = cantidad;
         this.precioUnitario = precioUnitario;
         this.reserva = reserva;
@@ -61,12 +61,12 @@ public class DetallePedido {
 
     @Override
     public String toString() {
-        return "DetallePedido{" +
-                "idDetalle=" + idDetalle +
-                ", cantidad=" + cantidad +
-                ", precioUnitario=" + precioUnitario +
-                ", reserva=" + reserva.getIdReserva() +
-                ", plato=" + plato.getNombre() +
-                '}';
+        return String.format(
+                "%-5d %-10d %-20s %-10.2f",
+                idDetalle,
+                cantidad,
+                plato.getNombre(),
+                precioUnitario
+        );
     }
 }

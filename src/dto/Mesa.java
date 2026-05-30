@@ -1,4 +1,4 @@
-package modelo;
+package dto;
 
 public class Mesa {
 
@@ -60,12 +60,9 @@ public class Mesa {
 
     @Override
     public String toString() {
-        return "Mesa{" +
-                "idMesa=" + idMesa +
-                ", numero=" + numero +
-                ", capacidad=" + capacidad +
-                ", ubicacion='" + ubicacion + '\'' +
-                ", estado='" + estado + '\'' +
-                '}';
+        return String.format(
+                "%-5d %-8d %-10d %-20s %-15s",
+                idMesa, numero, capacidad, ubicacion, estado
+        );
     }
 }

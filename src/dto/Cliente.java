@@ -1,4 +1,4 @@
-package modelo;
+package dto;
 
 public class Cliente {
 
@@ -70,13 +70,9 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "idCliente=" + idCliente +
-                ", dni='" + dni + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", correo='" + correo + '\'' +
-                ", direccion='" + direccion + '\'' +
-                '}';
+        return String.format(
+                "%-5d %-12s %-20s %-15s %-30s %-25s",
+                idCliente, dni, nombre, telefono, correo, direccion
+        );
     }
 }

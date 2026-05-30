@@ -1,4 +1,4 @@
-package modelo;
+package dto;
 
 public class CategoriaPlato {
 
@@ -40,10 +40,9 @@ public class CategoriaPlato {
 
     @Override
     public String toString() {
-        return "CategoriaPlato{" +
-                "idCategoria=" + idCategoria +
-                ", nombre='" + nombre + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                '}';
+        return String.format(
+                "%-5d %-20s %-40s",
+                idCategoria, nombre, descripcion
+        );
     }
 }

@@ -1,7 +1,7 @@
 package dao;
 
 import conexion.ConexionBD;
-import modelo.Mesa;
+import dto.Mesa;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

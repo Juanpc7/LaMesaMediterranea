@@ -1,9 +1,9 @@
 package dao;
 
 import conexion.ConexionBD;
-import modelo.DetallePedido;
-import modelo.Plato;
-import modelo.ReservaPedido;
+import dto.DetallePedido;
+import dto.Plato;
+import dto.ReservaPedido;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
