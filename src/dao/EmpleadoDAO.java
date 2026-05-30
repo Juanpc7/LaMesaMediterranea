@@ -24,7 +24,7 @@ public class EmpleadoDAO {
             ps.setString(1, empleado.getNombre());
             ps.setString(2, empleado.getCargo());
             ps.setString(3, empleado.getTurno());
-            ps.setInt(4, empleado.getAniosExperiencia());
+            ps.setInt(4, empleado.getAñosExperiencia());
 
             ps.executeUpdate();
 
@@ -62,7 +62,7 @@ public class EmpleadoDAO {
                 empleado.setNombre(rs.getString("nombre"));
                 empleado.setCargo(rs.getString("cargo"));
                 empleado.setTurno(rs.getString("turno"));
-                empleado.setAniosExperiencia(rs.getInt("anios_experiencia"));
+                empleado.setAñosExperiencia(rs.getInt("anios_experiencia"));
 
                 lista.add(empleado);
 
@@ -90,7 +90,7 @@ public class EmpleadoDAO {
             ps.setString(1, empleado.getNombre());
             ps.setString(2, empleado.getCargo());
             ps.setString(3, empleado.getTurno());
-            ps.setInt(4, empleado.getAniosExperiencia());
+            ps.setInt(4, empleado.getAñosExperiencia());
             ps.setInt(5, empleado.getIdEmpleado());
 
             int filas = ps.executeUpdate();
